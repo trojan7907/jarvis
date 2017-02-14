@@ -15,6 +15,8 @@ from shutil import move
 from os import remove, close
 
 r = sr.Recognizer()
+
+
 ya_uuid = 'f66f1992e86811e6bf01fe55135034f8'
 ya_api_key = 'b0da0acd-dcfe-4785-b496-10ac81f56ce9'
 
