@@ -22,8 +22,8 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
 
-token = '376121237:AAEa4q5bt9PKh32Cb6JAtXRy5It7XGD-8Oo'
-#token = '345342479:AAGc-uFkYtrsUHYgzBbG8uNdHof8m2evGF0'
+token = ''
+#token = ''
 
 bot = telebot.TeleBot(token)
 
