@@ -1,0 +1,24 @@
+from grab import Grab
+
+
+g = Grab(log_file='out2.html')
+g.go('https://yandex.ru/search/?lr=54&msid=1490109814.13123.22905.32431&text=hello') # запрос
+
+if g.doc.select('.//h1').exists():  # проверка на загулку
+    sms1 = g.doc.select('.//h1').text()
+    if('ой…' in sms1):
+        print('Captcha!')
+
+if g.doc.select('//img/@src').exists():  # вывод картинки каптчи
+    sms1 = g.doc.select('//img/@src').text()
+    print(sms1)
+
+
+
+new = input('Введите каптчу: ')
+
+print(new)
+
+
+g.doc.set_input_by_id('rep', '{}'.format(new))
+g.doc.submit()
